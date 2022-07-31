@@ -1,1 +1,5 @@
-Good day to you!
+layout: page
+title: "HOME"
+permalink: /
+
+# Hello
