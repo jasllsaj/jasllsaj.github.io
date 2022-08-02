@@ -160,22 +160,20 @@ pgp: False
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: ""
-author_blurb_image: "/img/2019.png"
+author_blurb:
+author_blurb_image:
 
 ##################
 # Social Buttons #
 ##################
 
 social:
-  - title: "google"
-    url: "mailto:laijason2@gmail.com"
   - title: "facebook"
-    url: "https://www.facebook.com/jlai2000"
+    url: "https://www.facebook.com/js0nlai"
   - title: "github"
-    url: "https://github.com/jasllsaj"
+    url: "https://github.com/js0n-lai"
   - title: "linkedin"
-    url: "https://www.linkedin.com/in/jlai2000"
+    url: "https://www.linkedin.com/in/js0n-lai"
 
 ############
 # 404 page #
