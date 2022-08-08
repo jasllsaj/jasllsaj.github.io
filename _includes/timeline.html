@@ -1,6 +1,61 @@
+<!-- The Modal -->
+<div id="uniModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" id="uniSpan">&times;</span>
+    <h2>Prizes and Scholarships</h2>
+    <ul>
+      <li> University of Sydney Chancellor's Award </li>
+      <li> The Yim Family Foundation Scholarship - Engineering Vacation Research Internship Program (2021) </li>
+      <li> Academic Merit Prize (2019, 2021) </li>
+      <li> Engineering Vacation Research Internship Program Scholarship (2020) </li>
+      <li> Dean's List of Excellence in Academic Performance (2020) </li>
+      <li> Department of Mechanical and Mechatronic Engineering Junior Prize for Outstanding Proficiency (2019) </li>
+      <li> Liversidge Scholarship (2019) </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="schoolModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" id="schoolSpan">&times;</span>
+    <h2>Achievements</h2>
+    <ul>
+      <li> 99.95 ATAR </li>
+      <li> NSW HSC All-round Achiever (2018) </li>
+      <li> Ranked 2nd in NSW for HSC Chemistry (2018) </li>
+      <li> Ranked 5th in NSW for HSC Information Processes and Technology (2016) </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="yumiModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" id="yumiSpan">&times;</span>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="hyperspectralModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" id="hyperspectralSpan">&times;</span>
+  </div>
+
+</div>
 
 <!-- Timeline Start -->
-
 <section id="{{ page.section-type }}" class="container content-section text-center">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
@@ -43,3 +98,36 @@
 </section>
 
 <!-- Timeline End -->
+<script>
+  var unimodal = document.getElementById("uniModal");
+  var schoolmodal = document.getElementById("schoolModal");
+  var yumimodal = document.getElementById("yumiModal");
+  var hyperspectralmodal = document.getElementById("hyperspectralModal");
+
+  var unibtn = document.getElementById("uni");
+  var schoolbtn = document.getElementById("school");
+  var yumibtn = document.getElementById("yumi");
+  var hyperspectralbtn = document.getElementById("hyperspectral");
+
+  var unispan = document.getElementById("uniSpan");
+  var schoolspan = document.getElementById("schoolSpan"); 
+  var yumispan = document.getElementById("yumiSpan");
+  var hyperspectralspan = document.getElementById("hyperspectralSpan"); 
+
+  unibtn.onclick = function() { unimodal.style.display = "block"; }
+  schoolbtn.onclick = function() { schoolmodal.style.display = "block"; }
+  yumibtn.onclick = function() { yumimodal.style.display = "block"; }
+  hyperspectralbtn.onclick = function() { hyperspectralmodal.style.display = "block"; }
+
+  unispan.onclick = function() { unimodal.style.display = "none"; }
+  schoolspan.onclick = function() { schoolmodal.style.display = "none"; }
+  yumispan.onclick = function() { yumimodal.style.display = "none"; }
+  hyperspectralspan.onclick = function() { hyperspectralmodal.style.display = "none"; }
+
+  window.onclick = function(event) {
+    if (event.target == unimodal) { unimodal.style.display = "none"; }
+    else if (event.target == schoolmodal) { schoolmodal.style.display = "none"; }
+    else if (event.target == yumimodal) { yumimodal.style.display = "none"; }
+    else if (event.target == hyperspectralmodal) { hyperspectralmodal.style.display = "none"; }
+  }
+</script>
