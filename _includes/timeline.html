@@ -41,6 +41,57 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" id="yumiSpan">&times;</span>
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="img/2019.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="img/csharp.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="img/c.png" style="width:100%">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="img/matlab.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="img/python.png" style="width:100%">
+      </div>
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column_gallery">
+          <img class="demo cursor" src="img/2019.jpg" style="width:100%" onclick="currentSlide(1)" alt="Image 1 caption">
+        </div>
+        <div class="column_gallery">
+          <img class="demo cursor" src="img/csharp.png" style="width:100%" onclick="currentSlide(2)" alt="Image 2 caption">
+        </div>
+        <div class="column_gallery">
+          <img class="demo cursor" src="img/c.png" style="width:100%" onclick="currentSlide(3)" alt="Image 3 caption">
+        </div>
+        <div class="column_gallery">
+          <img class="demo cursor" src="img/matlab.png" style="width:100%" onclick="currentSlide(4)" alt="Image 4 caption">
+        </div>
+        <div class="column_gallery">
+          <img class="demo cursor" src="img/python.png" style="width:100%" onclick="currentSlide(5)" alt="Image 5 caption">
+        </div>    
+      </div>
+    </div>
   </div>
 
 </div>
@@ -129,5 +180,36 @@
     else if (event.target == schoolmodal) { schoolmodal.style.display = "none"; }
     else if (event.target == yumimodal) { yumimodal.style.display = "none"; }
     else if (event.target == hyperspectralmodal) { hyperspectralmodal.style.display = "none"; }
+  }
+</script>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
   }
 </script>
