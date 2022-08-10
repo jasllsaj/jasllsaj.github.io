@@ -44,13 +44,13 @@
     <div class="container">
       <div class="yumiSlides">
         <div class="numbertext">1 / 5</div>
-         <img src="img/timeline/yumi/start.png" style="width:100%">
+         <img src="img/timeline/yumi/start.png" style="width:100%;">
         
       </div>
 
       <div class="yumiSlides">
         <div class="numbertext">2 / 5</div>
-        <img src="img/timeline/yumi/blocks.png" style="width:100%">
+        <img src="img/timeline/yumi/blocks1.png" style="width:60%;margin-left:auto;margin-right:auto;display:block">
         
       </div>
 
@@ -73,28 +73,28 @@
         </video>
       </div>
         
-      <a class="prev" onclick="plusSlides(-1, 'yumiSlides')">❮</a>
-      <a class="next" onclick="plusSlides(1, 'yumiSlides')">❯</a>
+      <a class="prev" onclick="plusSlides(-1, 'yumiSlides', 'demo_yumi', 'caption_yumi')">❮</a>
+      <a class="next" onclick="plusSlides(1, 'yumiSlides', 'demo_yumi', 'caption_yumi')">❯</a>
 
       <div class="caption-container">
-        <p id="caption"></p>
+        <p id="caption_yumi"></p>
       </div>
 
       <div class="row">
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/start.png" style="width:100%" id="yumi1" onclick="currentSlide(1, 'yumiSlides')" alt="Randomly scattered Jenga blocks to be detected and stacked.">
+          <img class="demo_yumi" src="img/timeline/yumi/start.png" style="width:100%" onclick="currentSlide(1, 'yumiSlides', 'demo_yumi', 'caption_yumi')" alt="Randomly scattered Jenga blocks to be detected and stacked.">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/blocks_resized.png" style="width:100%" id="yumi2" onclick="currentSlide(2, 'yumiSlides')" alt="Automatically detected Jenga blocks (different demonstration).">
+          <img class="demo_yumi" src="img/timeline/yumi/blocks_resized.png" style="width:100%" onclick="currentSlide(2, 'yumiSlides', 'demo_yumi', 'caption_yumi')" alt="Automatically detected Jenga blocks (different demonstration).">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/tower_resized.png" style="width:100%" id="yumi3" onclick="currentSlide(3, 'yumiSlides')" alt="Tower constructed by the algorithm.">
+          <img class="demo_yumi" src="img/timeline/yumi/tower_resized.png" style="width:100%" onclick="currentSlide(3, 'yumiSlides', 'demo_yumi', 'caption_yumi')" alt="Tower constructed by the algorithm.">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/tower2_resized.png" style="width:100%" id="yumi4" onclick="currentSlide(4, 'yumiSlides')" alt="Placement of blocks onto the tower.">
+          <img class="demo_yumi" src="img/timeline/yumi/tower2_resized.png" style="width:100%" onclick="currentSlide(4, 'yumiSlides', 'demo_yumi', 'caption_yumi')" alt="Placement of blocks onto the tower.">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/timelapse_thumbnail_resized.png" style="width:100%" onclick="currentSlide(5, 'yumiSlides');" id="yumi5" alt="Timelapse of a tower being constructed.">
+          <img class="demo_yumi" src="img/timeline/yumi/timelapse_thumbnail_resized.png" style="width:100%" onclick="currentSlide(5, 'yumiSlides', 'demo_yumi', 'caption_yumi')" alt="Timelapse of a tower being constructed.">
         </div>    
       </div>
     </div>
@@ -108,6 +108,60 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" id="hyperspectralSpan">&times;</span>
+    <div class="container">
+      <div class="hyperspectralSlides">
+        <div class="numbertext">1 / 5</div>
+         <img src="img/timeline/hs/report.png" style="width:35%;margin-left:auto;margin-right:auto;display:block">
+        
+      </div>
+
+      <div class="hyperspectralSlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="img/timeline/hs/pingpong.jpg" style="width:100%">
+        
+      </div>
+
+      <div class="hyperspectralSlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="img/timeline/hs/gray.jpg" style="width:100%">
+      </div>
+        
+      <div class="hyperspectralSlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="img/timeline/hs/scene.jpg" style="width:100%">
+      </div>
+
+      <div class="hyperspectralSlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="img/timeline/hs/reconstructed.png" style="width:60%;margin-left:auto;margin-right:auto;display:block">
+      </div>
+        
+      <a class="prev" onclick="plusSlides(-1, 'hyperspectralSlides', 'demo_hs', 'caption_hs')">❮</a>
+      <a class="next" onclick="plusSlides(1, 'hyperspectralSlides', 'demo_hs', 'caption_hs')">❯</a>
+
+      <div class="caption-container">
+        <p id="caption_hs"></p>
+      </div>
+
+      <div class="row">
+        <div class="column_gallery">
+          <img class="demo_hs" src="img/timeline/hs/report.png" style="width:100%" onclick="currentSlide(1, 'hyperspectralSlides', 'demo_hs', 'caption_hs')" alt="Spatial calibration of a 3D hyperspectral camera.">
+        </div>
+        <div class="column_gallery">
+          <img class="demo_hs" src="img/timeline/hs/pingpong.jpg" style="width:100%" onclick="currentSlide(2, 'hyperspectralSlides', 'demo_hs', 'caption_hs')" alt="Alignment of monitor pixels to 3D world coordinates using a predefined pattern.">
+        </div>
+        <div class="column_gallery">
+          <img class="demo_hs" src="img/timeline/hs/gray.jpg" style="width:100%" onclick="currentSlide(3, 'hyperspectralSlides', 'demo_hs', 'caption_hs')" alt="Calibration of monitor pixels to line-scan hyperspectral image coordinates using projected Gray code patterns.">
+        </div>
+        <div class="column_gallery">
+          <img class="demo_hs" src="img/timeline/hs/scene.jpg" style="width:100%" onclick="currentSlide(4, 'hyperspectralSlides', 'demo_hs', 'caption_hs')" alt="Example scene with a ColorChecker.">
+        </div>
+        <div class="column_gallery">
+          <img class="demo_hs" src="img/timeline/hs/reconstructed.png" style="width:100%" onclick="currentSlide(5, 'hyperspectralSlides', 'demo_hs', 'caption_hs');" alt="Reconstructed scene showing preservation of geometric features and preliminary spectral data for each 3D point (two shown as examples).">
+        </div>    
+      </div>
+    </div>
+  </div>
   </div>
 
 </div>
@@ -156,7 +210,7 @@
 
 <!-- Timeline End -->
 <script>
-  let slideIndex = 1;
+  var slideIndex = 1;
   var unimodal = document.getElementById("uniModal");
   var schoolmodal = document.getElementById("schoolModal");
   var yumimodal = document.getElementById("yumiModal");
@@ -172,17 +226,17 @@
   var yumispan = document.getElementById("yumiSpan");
   var hyperspectralspan = document.getElementById("hyperspectralSpan"); 
 
-  var yumislides = document.getElementsByClassName("yumiSlides");
-
   unibtn.onclick = function() { unimodal.style.display = "block"; }
   schoolbtn.onclick = function() { schoolmodal.style.display = "block"; }
   yumibtn.onclick = function() {
     yumimodal.style.display = "block";
-    showSlides(slideIndex, "yumiSlides");
+    slideIndex = 1;
+    currentSlide(slideIndex, "yumiSlides", "demo_yumi", "caption_yumi");
   }
   hyperspectralbtn.onclick = function() {
     hyperspectralmodal.style.display = "block";
-    showSlides(slideIndex, "hyperspectralSlides");
+    slideIndex = 1;
+    currentSlide(slideIndex, "hyperspectralSlides", "demo_hs", "caption_hs");
   }
 
   unispan.onclick = function() { unimodal.style.display = "none"; }
@@ -191,37 +245,36 @@
   hyperspectralspan.onclick = function() { hyperspectralmodal.style.display = "none"; }
 
   window.onclick = function(event) {
-    slideIndex = 1;
     if (event.target == unimodal) { unimodal.style.display = "none"; }
     else if (event.target == schoolmodal) { schoolmodal.style.display = "none"; }
     else if (event.target == yumimodal) { yumimodal.style.display = "none"; }
     else if (event.target == hyperspectralmodal) { hyperspectralmodal.style.display = "none"; }
   }
 
-  function plusSlides(n, slideName) {
-    showSlides(slideIndex += n, slideName);
+  function plusSlides(n, slideName, demoName, captionName) {
+    currentSlide(slideIndex + n, slideName, demoName, captionName);
   }
 
-  function currentSlide(n, slideName) {
-    slideIndex = n;
-    showSlides(n, slideName);
+  function currentSlide(n, slideName, demoName, captionName) {
+    slideIndex = showSlides(n, slideName, demoName, captionName);
   }
 
-  function showSlides(n, slideName) {
+  function showSlides(n, slideName, demoName, captionName) {
     let i;
     let slides = document.getElementsByClassName(slideName);
-    let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    let dots = document.getElementsByClassName(demoName);
+    let captionText = document.getElementById(captionName);
+    if (n > slides.length) {n = 1}
+    if (n < 1) {n = slides.length}
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+    slides[n-1].style.display = "block";
+    dots[n-1].className += " active";
+    captionText.innerHTML = dots[n-1].alt;
+    return n;
   }
 </script>
