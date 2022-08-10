@@ -42,29 +42,29 @@
   <div class="modal-content">
     <span class="close" id="yumiSpan">&times;</span>
     <div class="container">
-      <div class="mySlides">
+      <div class="yumiSlides">
         <div class="numbertext">1 / 5</div>
          <img src="img/timeline/yumi/start.png" style="width:100%">
         
       </div>
 
-      <div class="mySlides">
+      <div class="yumiSlides">
         <div class="numbertext">2 / 5</div>
         <img src="img/timeline/yumi/blocks.png" style="width:100%">
         
       </div>
 
-      <div class="mySlides">
+      <div class="yumiSlides">
         <div class="numbertext">3 / 5</div>
         <img src="img/timeline/yumi/tower.png" style="width:100%">
       </div>
         
-      <div class="mySlides">
+      <div class="yumiSlides">
         <div class="numbertext">4 / 5</div>
         <img src="img/timeline/yumi/tower2.png" style="width:100%">
       </div>
 
-      <div class="mySlides">
+      <div class="yumiSlides">
         <div class="numbertext">5 / 5</div>
         <video width="100%" controls>
             <source src="img/timeline/yumi/timelapse.mp4" type="video/mp4">
@@ -73,8 +73,8 @@
         </video>
       </div>
         
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
+      <a class="prev" onclick="plusSlides(-1, 'yumiSlides')">❮</a>
+      <a class="next" onclick="plusSlides(1, 'yumiSlides')">❯</a>
 
       <div class="caption-container">
         <p id="caption"></p>
@@ -82,19 +82,19 @@
 
       <div class="row">
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/start.png" style="width:100%" onclick="currentSlide(1)" alt="Randomly scattered Jenga blocks to be detected and stacked.">
+          <img class="demo cursor" src="img/timeline/yumi/start.png" style="width:100%" id="yumi1" onclick="currentSlide(1, 'yumiSlides')" alt="Randomly scattered Jenga blocks to be detected and stacked.">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/blocks_resized.png" style="width:100%" onclick="currentSlide(2)" alt="Automatically detected Jenga blocks (different demonstration).">
+          <img class="demo cursor" src="img/timeline/yumi/blocks_resized.png" style="width:100%" id="yumi2" onclick="currentSlide(2, 'yumiSlides')" alt="Automatically detected Jenga blocks (different demonstration).">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/tower_resized.png" style="width:100%" onclick="currentSlide(3)" alt="Tower constructed by the algorithm.">
+          <img class="demo cursor" src="img/timeline/yumi/tower_resized.png" style="width:100%" id="yumi3" onclick="currentSlide(3, 'yumiSlides')" alt="Tower constructed by the algorithm.">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/tower2_resized.png" style="width:100%" onclick="currentSlide(4)" alt="Placement of blocks onto the tower.">
+          <img class="demo cursor" src="img/timeline/yumi/tower2_resized.png" style="width:100%" id="yumi4" onclick="currentSlide(4, 'yumiSlides')" alt="Placement of blocks onto the tower.">
         </div>
         <div class="column_gallery">
-          <img class="demo cursor" src="img/timeline/yumi/timelapse_thumbnail_resized.png" style="width:100%" onclick="currentSlide(5)" alt="Timelapse of a tower being constructed.">
+          <img class="demo cursor" src="img/timeline/yumi/timelapse_thumbnail_resized.png" style="width:100%" onclick="currentSlide(5, 'yumiSlides');" id="yumi5" alt="Timelapse of a tower being constructed.">
         </div>    
       </div>
     </div>
@@ -156,6 +156,7 @@
 
 <!-- Timeline End -->
 <script>
+  let slideIndex = 1;
   var unimodal = document.getElementById("uniModal");
   var schoolmodal = document.getElementById("schoolModal");
   var yumimodal = document.getElementById("yumiModal");
@@ -171,10 +172,18 @@
   var yumispan = document.getElementById("yumiSpan");
   var hyperspectralspan = document.getElementById("hyperspectralSpan"); 
 
+  var yumislides = document.getElementsByClassName("yumiSlides");
+
   unibtn.onclick = function() { unimodal.style.display = "block"; }
   schoolbtn.onclick = function() { schoolmodal.style.display = "block"; }
-  yumibtn.onclick = function() { yumimodal.style.display = "block"; }
-  hyperspectralbtn.onclick = function() { hyperspectralmodal.style.display = "block"; }
+  yumibtn.onclick = function() {
+    yumimodal.style.display = "block";
+    showSlides(slideIndex, "yumiSlides");
+  }
+  hyperspectralbtn.onclick = function() {
+    hyperspectralmodal.style.display = "block";
+    showSlides(slideIndex, "hyperspectralSlides");
+  }
 
   unispan.onclick = function() { unimodal.style.display = "none"; }
   schoolspan.onclick = function() { schoolmodal.style.display = "none"; }
@@ -182,28 +191,25 @@
   hyperspectralspan.onclick = function() { hyperspectralmodal.style.display = "none"; }
 
   window.onclick = function(event) {
+    slideIndex = 1;
     if (event.target == unimodal) { unimodal.style.display = "none"; }
     else if (event.target == schoolmodal) { schoolmodal.style.display = "none"; }
     else if (event.target == yumimodal) { yumimodal.style.display = "none"; }
     else if (event.target == hyperspectralmodal) { hyperspectralmodal.style.display = "none"; }
   }
-</script>
 
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+  function plusSlides(n, slideName) {
+    showSlides(slideIndex += n, slideName);
   }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+  function currentSlide(n, slideName) {
+    slideIndex = n;
+    showSlides(n, slideName);
   }
 
-  function showSlides(n) {
+  function showSlides(n, slideName) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName(slideName);
     let dots = document.getElementsByClassName("demo");
     let captionText = document.getElementById("caption");
     if (n > slides.length) {slideIndex = 1}

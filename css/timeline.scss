@@ -273,16 +273,24 @@
 
 img {
   vertical-align: middle;
+  width: 100%;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
+  width: 80%;
 }
 
 /* Hide the images by default */
-.mySlides {
+.yumiSlides {
   display: none;
+  width: 100%;
+}
+
+.hyperspectralSlides {
+    display: none;
+    width: 100%;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
