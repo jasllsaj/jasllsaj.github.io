@@ -353,7 +353,7 @@ img {
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color: black;
   padding: 2px 16px;
   color: white;
 }
@@ -372,6 +372,8 @@ img {
 /* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
+  vertical-align: middle;
+  object-fit: contain;
 }
 
 .active,
