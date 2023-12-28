@@ -3,7 +3,7 @@
 
 # NB! Set your site's url, otherwise stuff will break :)
 
-url: "https://jasllsaj.github.io"
+url: "https://js0n-lai.github.io"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (https://yourusername.github.io/repository-name)
@@ -31,7 +31,7 @@ force-https: True
 lang: "en"
 author: "Jason Lai"
 title: "{ Jason Lai }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
+description: "Personal website of Jason Lai."
 keywords: "lai, jason, personal, jekyll, theme"
 favicon: "/img/robot.ico"
 
@@ -56,7 +56,7 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "Final year Mechatronics and Science student @ Sydney University"
+  - text: "Mechatronics and Science Graduate from Sydney University"
   - text: "Diligent. Results-driven. Ready to make a difference."
 
 me-img: "/img/2019.jpg"
@@ -109,16 +109,19 @@ icon-192p: "/img/web-app/icon-192p.png"
 events:
   - image: "/img/timeline/usyd.png"
     date: "February 2019 - December 2023"
-    description: "Studying Mechatronics and Science with majors in Space Engineering and Chemistry. <a href=\"javascript:;\" id=\"uni\">See my prizes and scholarships.</a>"
+    description: "Studied Mechatronics and Science with majors in Space Engineering and Chemistry. <a href=\"javascript:;\" id=\"uni\">See my prizes and scholarships.</a>"
+  - image: "/img/timeline/neuralnet.png"
+    date: "January 2023 - November 2023"
+    description: "Completed my honours thesis on Neural Radiance Fields, <b>an emerging AI model</b> that learns a scene representation. I showed that depth priors collected by autonomous vehicles can be used during training to significantly improve the learned scene's geometry. This has implications for downstream applications such as motion planning and navigation."
   - image: "/img/timeline/cochlear.png"
-    date: "November 2022 - present"
-    description: "Interned as a Summer Student and working as an ongoing casual at Cochlear Limited. Developed firmware to drive <b>wireless module testing using Bluetooth Low Energy in collaboration</b> with other members of the Smart Hearing Alliance. I also became <b>familiar with agile methodology</b>, using platforms such as JIRA, Confluence and Perforce."
+    date: "November 2022 - June 2023"
+    description: "Interned as a Summer Student at Cochlear Limited. Developed firmware to drive <b>wireless module testing using Bluetooth Low Energy in collaboration</b> with other members of the Smart Hearing Alliance. I also became <b>familiar with agile methodology</b>, using platforms such as JIRA, Confluence and Perforce."
   - image: "/img/timeline/control.png"
-    date: "February 2021 - present"
+    date: "February 2021 - June 2023"
     description: "Tutored introductory Python (ENGG1810/INFO1110) and control engineering (AMME3500) units at Sydney University."
   - image: "/img/timeline/JFC.jpg"
     date: "June 2022 - July 2022"
-    description: "Interned at Jacaranda Flame Consulting. Developed software on top of the Tekla Structures Open API to <b>automate 3D modelling for a client</b>. Subject to non-disclosure agreement."
+    description: "Interned at Jacaranda Flame Consulting. Developed software using the Tekla Structures Open API to <b>automate 3D modelling for a client</b>. Subject to non-disclosure agreement."
   - image: "/img/timeline/acfr.png"
     date: "December 2021 - February 2022"
     description: "Interned at the Australian Centre for Field Robotics to devise a <b>highly automated, data-driven algorithm for calibrating a 3D hyperspectral camera</b>.
@@ -200,7 +203,7 @@ pages_list:
 
 # Exclusion list from the generated _site
 
-exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
+exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts", "vendor"]
 
 # Pagination path
 
