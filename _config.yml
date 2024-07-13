@@ -3,7 +3,7 @@
 
 # NB! Set your site's url, otherwise stuff will break :)
 
-url: "https://jasllsaj.github.io"
+url: "https://js0n-lai.github.io"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (https://yourusername.github.io/repository-name)
@@ -113,9 +113,12 @@ events:
   - image: "/img/timeline/usyd.png"
     date: "February 2019 - December 2023"
     description: "Completed a Bachelor of Engineering (Mechatronics) and Science with majors in Space Engineering and Chemistry. <a href=\"javascript:;\" id=\"uni\">See my undergraduate prizes and scholarships.</a>"
+  - image: "/img/timeline/neuralnet.png"
+    date: "January 2023 - November 2023"
+    description: "Completed my honours thesis on Neural Radiance Fields, <b>an emerging AI model</b> that learns a scene representation. I showed that depth priors collected by autonomous vehicles can be used during training to significantly improve the learned scene's geometry. This has implications for downstream applications such as motion planning and navigation."
   - image: "/img/timeline/cochlear.png"
     date: "November 2022 - June 2023"
-    description: "Interned as a Summer Student and working as an ongoing casual at Cochlear Limited. Developed firmware to drive <b>wireless module testing using Bluetooth Low Energy in collaboration</b> with other members of the Smart Hearing Alliance. I also became <b>familiar with agile methodology</b>, using platforms such as JIRA, Confluence and Perforce."
+    description: "Interned as a Summer Student at Cochlear Limited. Developed firmware to drive <b>wireless module testing using Bluetooth Low Energy in collaboration</b> with other members of the Smart Hearing Alliance. I also became <b>familiar with agile methodology</b>, using platforms such as JIRA, Confluence and Perforce."
   - image: "/img/timeline/control.png"
     date: "February 2021 - June 2023"
     description: "Tutored introductory Python (ENGG1810/INFO1110) and control engineering (AMME3500) units at Sydney University."
@@ -203,7 +206,7 @@ pages_list:
 
 # Exclusion list from the generated _site
 
-exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
+exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts", 'Gemfile', 'node_modules/', 'vendor/']
 
 # Pagination path
 
