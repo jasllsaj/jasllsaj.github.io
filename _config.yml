@@ -56,7 +56,7 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "Final year Mechatronics and Science student @ Sydney University"
+  - text: "First Year PhD Student @ Australian Centre for Robotics (University of Sydney)"
   - text: "Diligent. Results-driven. Ready to make a difference."
 
 me-img: "/img/2019.jpg"
@@ -107,21 +107,24 @@ icon-192p: "/img/web-app/icon-192p.png"
 ############
 
 events:
+  - image: "/img/timeline/acfr.png"
+    date: "July 2024 - present"
+    description: "Undertaking a PhD with the Robotic Imaging Group within the Australian Centre for Robotics to develop new methods for <b>change detection in 3D environments</b>. By drawing upon <b>high-fidelity representations</b> such as 3D Gaussian Splatting, this will allow robotic platforms to better understand their surroundings and make improved decisions. <a href=\"javascript:;\" id=\"phd\">See my postgraduate prizes and scholarships.</a>"
   - image: "/img/timeline/usyd.png"
     date: "February 2019 - December 2023"
-    description: "Studying Mechatronics and Science with majors in Space Engineering and Chemistry. <a href=\"javascript:;\" id=\"uni\">See my prizes and scholarships.</a>"
+    description: "Completed a Bachelor of Engineering (Mechatronics) and Science with majors in Space Engineering and Chemistry. <a href=\"javascript:;\" id=\"uni\">See my undergraduate prizes and scholarships.</a>"
   - image: "/img/timeline/cochlear.png"
-    date: "November 2022 - present"
+    date: "November 2022 - June 2023"
     description: "Interned as a Summer Student and working as an ongoing casual at Cochlear Limited. Developed firmware to drive <b>wireless module testing using Bluetooth Low Energy in collaboration</b> with other members of the Smart Hearing Alliance. I also became <b>familiar with agile methodology</b>, using platforms such as JIRA, Confluence and Perforce."
   - image: "/img/timeline/control.png"
-    date: "February 2021 - present"
+    date: "February 2021 - June 2023"
     description: "Tutored introductory Python (ENGG1810/INFO1110) and control engineering (AMME3500) units at Sydney University."
   - image: "/img/timeline/JFC.jpg"
     date: "June 2022 - July 2022"
     description: "Interned at Jacaranda Flame Consulting. Developed software on top of the Tekla Structures Open API to <b>automate 3D modelling for a client</b>. Subject to non-disclosure agreement."
   - image: "/img/timeline/acfr.png"
     date: "December 2021 - February 2022"
-    description: "Interned at the Australian Centre for Field Robotics to devise a <b>highly automated, data-driven algorithm for calibrating a 3D hyperspectral camera</b>.
+    description: "Interned with the Robotic Imaging Group within the Australian Centre for Robotics to devise a <b>highly automated, data-driven algorithm for calibrating a 3D hyperspectral camera</b>.
     The proposed method draws upon light field theory to create correspondences between line-scan hyperspectral image and world coordinates.
     This could <b>revolutionise perception</b> by allowing fusion of geometric and spectral information from a scene.
     <a href=\"javascript:;\" id=\"hyperspectral\">See photos.</a>"

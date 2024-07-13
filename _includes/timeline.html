@@ -1,16 +1,30 @@
 <!-- The Modal -->
+<div id="phdModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" id="phdSpan">&times;</span>
+    <h2>Postgraduate Prizes and Scholarships</h2>
+    <ul>
+      <li> Research Training Program Stipend (2024) </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- The Modal -->
 <div id="uniModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" id="uniSpan">&times;</span>
-    <h2>Prizes and Scholarships</h2>
+    <h2>Undergraduate Prizes and Scholarships</h2>
     <ul>
-      <li> University of Sydney Chancellor's Award </li>
+      <li> University of Sydney Chancellor's Award (2019 - 2023) </li>
+      <li> Dean's List of Excellence in Academic Performance (2020, 2022) </li>
       <li> The Yim Family Foundation Scholarship - Engineering Vacation Research Internship Program (2021) </li>
       <li> Academic Merit Prize (2019, 2021) </li>
       <li> Engineering Vacation Research Internship Program Scholarship (2020) </li>
-      <li> Dean's List of Excellence in Academic Performance (2020) </li>
       <li> Department of Mechanical and Mechatronic Engineering Junior Prize for Outstanding Proficiency (2019) </li>
       <li> Liversidge Scholarship (2019) </li>
     </ul>
@@ -24,7 +38,7 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" id="schoolSpan">&times;</span>
-    <h2>Achievements</h2>
+    <h2>School Achievements</h2>
     <ul>
       <li> 99.95 ATAR </li>
       <li> NSW HSC All-round Achiever (2018) </li>
@@ -211,21 +225,25 @@
 <!-- Timeline End -->
 <script>
   var slideIndex = 1;
+  var phdmodal = document.getElementById("phdModal");
   var unimodal = document.getElementById("uniModal");
   var schoolmodal = document.getElementById("schoolModal");
   var yumimodal = document.getElementById("yumiModal");
   var hyperspectralmodal = document.getElementById("hyperspectralModal");
 
+  var phdbtn = document.getElementById("phd");
   var unibtn = document.getElementById("uni");
   var schoolbtn = document.getElementById("school");
   var yumibtn = document.getElementById("yumi");
   var hyperspectralbtn = document.getElementById("hyperspectral");
 
+  var phdspan = document.getElementById("phdSpan");
   var unispan = document.getElementById("uniSpan");
   var schoolspan = document.getElementById("schoolSpan"); 
   var yumispan = document.getElementById("yumiSpan");
   var hyperspectralspan = document.getElementById("hyperspectralSpan"); 
 
+  phdbtn.onclick = function() { phdmodal.style.display = "block"; }
   unibtn.onclick = function() { unimodal.style.display = "block"; }
   schoolbtn.onclick = function() { schoolmodal.style.display = "block"; }
   yumibtn.onclick = function() {
@@ -239,6 +257,7 @@
     currentSlide(slideIndex, "hyperspectralSlides", "demo_hs", "caption_hs");
   }
 
+  phdspan.onclick = function() { phdmodal.style.display = "none"; }
   unispan.onclick = function() { unimodal.style.display = "none"; }
   schoolspan.onclick = function() { schoolmodal.style.display = "none"; }
   yumispan.onclick = function() { yumimodal.style.display = "none"; }
